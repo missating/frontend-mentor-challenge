@@ -2,7 +2,20 @@ $bg-top: url(../images/bg-top.svg);
 $bg-bottom: url(../images/bg-bottom.svg);
 $grayish-blue: hsl(233, 13%, 49%);
 $light-grayish-blue: hsl(234, 14%, 74%);
+$dark-grayish-blue: hsl(232, 13%, 33%);
+$very-light-grayish-blue: hsl(240, 78%, 98%);
 $primary-gradient: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+
+%generic-card {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 2%;
+  height: 370px;
+  width: 280px;
+}
 
 * {
   margin: 0;
@@ -89,5 +102,28 @@ body {
         }
       }
     }
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .first-card,
+    .third-card {
+      @extend %generic-card;
+      background: #FFF;
+      color: $dark-grayish-blue;
+      box-shadow: -1px -1px 10px rgb(119, 118, 118);
+    }
+
+    .second-card {
+      @extend %generic-card;
+      background: $primary-gradient;
+      color: $very-light-grayish-blue;
+      height: 400px;
+    }
+
+
   }
 }
