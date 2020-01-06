@@ -13,8 +13,19 @@ $primary-gradient: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%
   flex-direction: column;
   text-align: center;
   border-radius: 2%;
-  height: 370px;
-  width: 280px;
+  padding: 1rem 2rem;
+  height: 400px;
+  width: 33%;
+  max-width: 300px;
+}
+
+%generic-btn {
+  width: 238px;
+  height: 38px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 2rem;
 }
 
 * {
@@ -109,21 +120,83 @@ body {
     justify-content: center;
     align-items: center;
 
+    .price-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-size: 2rem;
+        margin: 1rem 0 1rem 0;
+      }
+
+      .price {
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      border-top: 1px solid $light-grayish-blue;
+      padding: 1rem 0;
+    }
+
+    .last-child {
+      border-bottom: 1px solid $light-grayish-blue;
+    }
+
     .first-card,
     .third-card {
       @extend %generic-card;
       background: #FFF;
       color: $dark-grayish-blue;
       box-shadow: -1px -1px 10px rgb(119, 118, 118);
+
+      button {
+        @extend %generic-btn;
+        background: $primary-gradient;
+        color: $very-light-grayish-blue;
+        border: 1px solid transparent;
+
+        &:hover {
+          background: $very-light-grayish-blue;
+          color: #9399E9;
+          border: 1px solid #9399E9;
+        }
+      }
     }
 
     .second-card {
       @extend %generic-card;
       background: $primary-gradient;
       color: $very-light-grayish-blue;
-      height: 400px;
+      height: 430px;  
+
+      button {
+        @extend %generic-btn;
+        background: $very-light-grayish-blue;
+        color: #9399E9;
+        border: 1px solid transparent;
+
+        &:hover {
+          background: transparent;
+          color: $very-light-grayish-blue;
+          border: 1px solid $very-light-grayish-blue;
+        }
+      }
     }
+  }
+}
 
+@media(max-width: 768px) {
+  .main-container__cards{
+    flex-direction: column;
+    justify-content: space-between;
 
+    .first-card,
+    .second-card,
+    .third-card {
+      width: 400px;
+      margin: 1rem;
+    }
   }
 }

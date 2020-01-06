@@ -5,8 +5,19 @@
   flex-direction: column;
   text-align: center;
   border-radius: 2%;
-  height: 370px;
-  width: 280px; }
+  padding: 1rem 2rem;
+  height: 400px;
+  width: 33%;
+  max-width: 300px; }
+
+.main-container__cards .first-card button,
+.main-container__cards .third-card button, .main-container__cards .second-card button {
+  width: 238px;
+  height: 38px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 2rem; }
 
 * {
   margin: 0;
@@ -77,12 +88,54 @@ body {
     display: flex;
     justify-content: center;
     align-items: center; }
+    .main-container__cards .price-container {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .main-container__cards .price-container span {
+        font-size: 2rem;
+        margin: 1rem 0 1rem 0; }
+      .main-container__cards .price-container .price {
+        font-size: 4rem; }
+    .main-container__cards p {
+      border-top: 1px solid #b3b5c6;
+      padding: 1rem 0; }
+    .main-container__cards .last-child {
+      border-bottom: 1px solid #b3b5c6; }
     .main-container__cards .first-card,
     .main-container__cards .third-card {
       background: #FFF;
       color: #494c5f;
       box-shadow: -1px -1px 10px #777676; }
+      .main-container__cards .first-card button,
+      .main-container__cards .third-card button {
+        background: linear-gradient(135deg, #a3a8f0, #696fdd);
+        color: #f6f6fe;
+        border: 1px solid transparent; }
+        .main-container__cards .first-card button:hover,
+        .main-container__cards .third-card button:hover {
+          background: #f6f6fe;
+          color: #9399E9;
+          border: 1px solid #9399E9; }
     .main-container__cards .second-card {
       background: linear-gradient(135deg, #a3a8f0, #696fdd);
       color: #f6f6fe;
-      height: 400px; }
+      height: 430px; }
+      .main-container__cards .second-card button {
+        background: #f6f6fe;
+        color: #9399E9;
+        border: 1px solid transparent; }
+        .main-container__cards .second-card button:hover {
+          background: transparent;
+          color: #f6f6fe;
+          border: 1px solid #f6f6fe; }
+
+@media (max-width: 768px) {
+  .main-container__cards {
+    flex-direction: column;
+    justify-content: space-between; }
+    .main-container__cards .first-card,
+    .main-container__cards .second-card,
+    .main-container__cards .third-card {
+      width: 400px;
+      margin: 1rem; } }
