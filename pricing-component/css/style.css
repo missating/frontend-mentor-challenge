@@ -27,16 +27,17 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 15px; }
+  font-size: 15px;
+  height: 100%; }
 
 .main-container {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
   background-repeat: no-repeat;
   background-position: right top, left bottom;
-  z-index: -1;
-  opacity: 0.9; }
+  position: relative;
+  padding-bottom: 40px; }
   .main-container__header {
     display: flex;
     justify-content: center;
@@ -68,19 +69,19 @@ body {
           right: 0;
           bottom: 0;
           background: linear-gradient(135deg, #a3a8f0, #696fdd);
-          -webkit-transition: .4s;
-          transition: .4s;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
           border-radius: 100px; }
         .main-container__header--pricing-choice .toggle::after {
           position: absolute;
-          content: "";
+          content: '';
           top: 7%;
           left: 7%;
           width: 45%;
           height: 85%;
-          background-color: #FFF;
-          -webkit-transition: .4s;
-          transition: .4s;
+          background-color: #fff;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
           border-radius: 50%; }
         .main-container__header--pricing-choice .toggle:checked::after {
           left: 50%; }
@@ -104,7 +105,7 @@ body {
       border-bottom: 1px solid #b3b5c6; }
     .main-container__cards .first-card,
     .main-container__cards .third-card {
-      background: #FFF;
+      background: #fff;
       color: #494c5f;
       box-shadow: -1px -1px 10px #777676; }
       .main-container__cards .first-card button,
@@ -115,20 +116,30 @@ body {
         .main-container__cards .first-card button:hover,
         .main-container__cards .third-card button:hover {
           background: #f6f6fe;
-          color: #9399E9;
-          border: 1px solid #9399E9; }
+          color: #9399e9;
+          border: 1px solid #9399e9; }
     .main-container__cards .second-card {
       background: linear-gradient(135deg, #a3a8f0, #696fdd);
       color: #f6f6fe;
       height: 430px; }
       .main-container__cards .second-card button {
         background: #f6f6fe;
-        color: #9399E9;
+        color: #9399e9;
         border: 1px solid transparent; }
         .main-container__cards .second-card button:hover {
           background: transparent;
           color: #f6f6fe;
           border: 1px solid #f6f6fe; }
+  .main-container__footer {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center; }
+    .main-container__footer a {
+      color: #3e52a3;
+      cursor: pointer; }
 
 @media (max-width: 768px) {
   .main-container__cards {
