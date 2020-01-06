@@ -1,81 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+		<title>Frontend Mentor | Pricing component with toggle</title>
 
-  <title>Frontend Mentor | Pricing component with toggle</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap"
+			rel="stylesheet"
+		/>
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="css/style.css"
+			media="screen"
+		/>
+	</head>
 
-  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+	<body>
+		<div class="main-container">
+			<header class="main-container__header">
+				<h1>Our Pricing</h1>
+				<div class="main-container__header--pricing-choice">
+					<p>Annually</p>
+					<input type="checkbox" checked class="toggle" />
+					<p>Monthly</p>
+				</div>
+			</header>
 
-</head>
+			<main class="main-container__cards">
+				<article class="first-card">
+					<h2>Basic</h2>
+					<div class="price-container">
+						<span>
+							&dollar;
+						</span>
+						<span class="price">19.99</span>
+					</div>
+					<p>500 GB Storage</p>
+					<p>2 Users Allowed</p>
+					<p class="last-child">Send up to 3 GB</p>
+					<button>Learn More</button>
+				</article>
 
-<body>
+				<article class="second-card">
+					<h2>Professional</h2>
+					<div class="price-container">
+						<span>
+							&dollar;
+						</span>
+						<span class="price">24.99</span>
+					</div>
+					<p>1 TB Storage</p>
+					<p>5 Users Allowed</p>
+					<p class="last-child">Send up to 10 GB</p>
+					<button>Learn More</button>
+				</article>
 
-  <div class="main-container">
-    <header class="main-container__header">
-      <h1>Our Pricing</h1>
-      <div class="main-container__header--pricing-choice">
-        <p>Annually</p>
-        <input type="checkbox" checked class="toggle">
-        <p>Monthly</p>
-      </div>
-    </header>
+				<article class="third-card">
+					<h2>Master</h2>
+					<div class="price-container">
+						<span>
+							&dollar;
+						</span>
+						<span class="price">39.99</span>
+					</div>
+					<p>2 TB Storage</p>
+					<p>10 Users Allowed</p>
+					<p class="last-child">Send up to 20 GB</p>
+					<button>Learn More</button>
+				</article>
+			</main>
+		</div>
 
-    <section class="main-container__cards">
-      <article class="first-card">
-        <h2>Basic</h2>
-        <div class="price-container">
-          <span>
-            &dollar;
-          </span>
-          <span class="price">19.99</span>
-        </div>
-        <p>500 GB Storage</p>
-        <p>2 Users Allowed</p>
-        <p class="last-child">Send up to 3 GB</p>
-        <button>Learn More</button>
-      </article>
-
-      <article class="second-card">
-        <h2>Professional</h2>
-        <div class="price-container">
-          <span>
-            &dollar;
-          </span>
-          <span class="price">24.99</span>
-        </div>
-        <p>1 TB Storage</p>
-        <p>5 Users Allowed</p>
-        <p class="last-child">Send up to 10 GB</p>
-        <button>Learn More</button>
-      </article>
-
-      <article class="third-card">
-        <h2>Master</h2>
-        <div class="price-container">
-          <span>
-            &dollar;
-          </span>
-          <span class="price">39.99</span>
-        </div>
-        <p>2 TB Storage</p>
-        <p>10 Users Allowed</p>
-        <p class="last-child">Send up to 20 GB</p>
-        <button>Learn More</button>
-      </article>
-    </section>
-  </div>
-
-
-
-  <!-- Basic
+		<!-- Basic
   &dollar;19.99
   &dollar;199.99
   500 GB Storage
@@ -99,10 +107,9 @@
   Send up to 20 GB
   Learn More -->
 
-  <!-- <div class="attribution">
+		<!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-</body>
-
+	</body>
 </html>
