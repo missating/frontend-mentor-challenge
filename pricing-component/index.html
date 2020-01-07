@@ -1,111 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!-- displays site properly based on user's device -->
-		<meta
-			name="description"
-			content="Frontend Mentor | Pricing component with toggle"
-		/>
 
-		<title>Frontend Mentor | Pricing component with toggle</title>
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- displays site properly based on user's device -->
+	<meta name="description" content="Frontend Mentor | Pricing component with toggle" />
 
-		<link
-			href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap"
-			rel="stylesheet"
-		/>
+	<title>Frontend Mentor | Pricing component with toggle</title>
 
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="css/style.css"
-			media="screen"
-		/>
-	</head>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet" />
 
-	<body>
-		<div class="main-container">
-			<header class="main-container__header">
-				<h1>Our Pricing</h1>
-				<div class="main-container__header--pricing-choice">
-					<p>Annually</p>
-					<input
-						type="checkbox"
-						class="toggle"
-						tabindex="0"
-						aria-label="checkbox"
-					/>
-					<p>Monthly</p>
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+</head>
+
+<body>
+	<div class="main-container">
+		<header class="main-container__header">
+			<h1>Our Pricing</h1>
+			<div class="main-container__header--pricing-choice">
+				<p>Annually</p>
+				<input type="checkbox" class="toggle" tabindex="0" aria-label="checkbox" />
+				<p>Monthly</p>
+			</div>
+		</header>
+
+		<main class="main-container__cards">
+			<article class="first-card">
+				<h2>Basic</h2>
+				<div class="price-container">
+					<span>
+						&dollar;
+					</span>
+					<span class="price-month hidden">19.99</span>
+					<span class="price-year">199.99</span>
 				</div>
-			</header>
+				<p>500 GB Storage</p>
+				<p>2 Users Allowed</p>
+				<p class="last-child">Send up to 3 GB</p>
+				<button>Learn More</button>
+			</article>
 
-			<main class="main-container__cards">
-				<article class="first-card">
-					<h2>Basic</h2>
-					<div class="price-container">
-						<span>
-							&dollar;
-						</span>
-						<span class="price-month hidden">19.99</span>
-						<span class="price-year">199.99</span>
-					</div>
-					<p>500 GB Storage</p>
-					<p>2 Users Allowed</p>
-					<p class="last-child">Send up to 3 GB</p>
-					<button>Learn More</button>
-				</article>
+			<article class="second-card">
+				<h2>Professional</h2>
+				<div class="price-container">
+					<span>
+						&dollar;
+					</span>
+					<span class="price-month hidden">24.99</span>
+					<span class="price-year">249.99</span>
+				</div>
+				<p>1 TB Storage</p>
+				<p>5 Users Allowed</p>
+				<p class="last-child">Send up to 10 GB</p>
+				<button>Learn More</button>
+			</article>
 
-				<article class="second-card">
-					<h2>Professional</h2>
-					<div class="price-container">
-						<span>
-							&dollar;
-						</span>
-						<span class="price-month hidden">24.99</span>
-						<span class="price-year">249.99</span>
-					</div>
-					<p>1 TB Storage</p>
-					<p>5 Users Allowed</p>
-					<p class="last-child">Send up to 10 GB</p>
-					<button>Learn More</button>
-				</article>
+			<article class="third-card">
+				<h2>Master</h2>
+				<div class="price-container">
+					<span>
+						&dollar;
+					</span>
+					<span class="price-month hidden">39.99</span>
+					<span class="price-year">399.99</span>
+				</div>
+				<p>2 TB Storage</p>
+				<p>10 Users Allowed</p>
+				<p class="last-child">Send up to 20 GB</p>
+				<button>Learn More</button>
+			</article>
+		</main>
 
-				<article class="third-card">
-					<h2>Master</h2>
-					<div class="price-container">
-						<span>
-							&dollar;
-						</span>
-						<span class="price-month hidden">39.99</span>
-						<span class="price-year">399.99</span>
-					</div>
-					<p>2 TB Storage</p>
-					<p>10 Users Allowed</p>
-					<p class="last-child">Send up to 20 GB</p>
-					<button>Learn More</button>
-				</article>
-			</main>
+		<footer class="main-container__footer">
+			<p>
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+					Frontend Mentor
+				</a>
+				Coded by
+				<a href="https://github.com/missating" target="_blank">
+					Vanessa Ating </a>.
+			</p>
+		</footer>
+	</div>
+	<script src="js/main.js"></script>
+</body>
 
-			<footer class="main-container__footer">
-				<p>
-					Challenge by
-					<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
-						Frontend Mentor
-					</a>
-					Coded by
-					<a href="https://github.com/missating" target="_blank">
-						Vanessa Ating </a
-					>.
-				</p>
-			</footer>
-		</div>
-		<script src="js/main.js"></script>
-	</body>
 </html>

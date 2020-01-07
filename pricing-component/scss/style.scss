@@ -4,11 +4,9 @@ $grayish-blue: hsl(233, 13%, 49%);
 $light-grayish-blue: hsl(234, 14%, 74%);
 $dark-grayish-blue: hsl(232, 13%, 33%);
 $very-light-grayish-blue: hsl(240, 78%, 98%);
-$primary-gradient: linear-gradient(
-	135deg,
+$primary-gradient: linear-gradient(135deg,
 	hsl(236, 72%, 79%),
-	hsl(237, 63%, 64%)
-);
+	hsl(237, 63%, 64%));
 
 %generic-card {
 	display: flex;
