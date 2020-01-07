@@ -36,6 +36,7 @@ body {
   background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
   background-repeat: no-repeat;
   background-position: right top, left bottom;
+  opacity: 0.9;
   position: relative;
   padding-bottom: 40px; }
   .main-container__header {
@@ -96,8 +97,11 @@ body {
       .main-container__cards .price-container span {
         font-size: 2rem;
         margin: 1rem 0 1rem 0; }
-      .main-container__cards .price-container .price {
+      .main-container__cards .price-container .price-month,
+      .main-container__cards .price-container .price-year {
         font-size: 4rem; }
+      .main-container__cards .price-container .hidden {
+        display: none; }
     .main-container__cards p {
       border-top: 1px solid #b3b5c6;
       padding: 1rem 0; }

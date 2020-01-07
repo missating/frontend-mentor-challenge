@@ -50,6 +50,7 @@ body {
 	background-image: $bg-top, $bg-bottom;
 	background-repeat: no-repeat;
 	background-position: right top, left bottom;
+	opacity: 0.9;
 	position: relative;
 	padding-bottom: 40px;
 
@@ -133,8 +134,13 @@ body {
 				margin: 1rem 0 1rem 0;
 			}
 
-			.price {
+			.price-month,
+			.price-year {
 				font-size: 4rem;
+			}
+
+			.hidden {
+				display: none;
 			}
 		}
 
