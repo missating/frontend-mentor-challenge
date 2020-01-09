@@ -1,5 +1,55 @@
+$bg-pattern: url('../images/bg-pattern-desktop.svg');
+$light-gradient: linear-gradient(135deg,
+hsl(0, 0%, 100%),
+hsl(0, 100%, 98%));
+$hero-desktop: url('../images/hero-desktop.jpg');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  height: 100%;
+}
+
+.main-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: $light-gradient;
+  display: flex;
+  flex-direction: row;
+
+  &__column-one {
+    padding-left: 16rem;
+    background-image: $bg-pattern;
+    background-size: cover;
+    width: 60%;
+
+    .header {
+      padding-top: 5rem;
+    }
+  }
+
+
+  &__column-two {
+    background-image: $hero-desktop;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+  }
+}
+
+
+
+// <style>
+// .attribution { font-size: 11px; text-align: center; }
+// .attribution a { color: hsl(228, 45%, 44%); }
+// </style>
