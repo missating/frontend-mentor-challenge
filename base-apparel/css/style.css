@@ -1,52 +1,146 @@
 * {
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+  padding: 0; }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2rem;
-  height: 100%; }
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-size: 60% 100%; }
 
-.main-container {
-  min-height: 100vh;
-  width: 100vw;
-  background: linear-gradient(135deg, white, #fff5f5);
-  display: flex;
-  flex-direction: row; }
-  .main-container__column-one {
-    padding-left: 16rem;
-    background-image: url("../images/bg-pattern-desktop.svg");
-    background-size: cover;
-    width: 60%; }
-    .main-container__column-one .header {
-      padding-top: 5rem;
-      padding-bottom: 8rem; }
-    .main-container__column-one .content h1 {
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 'header hero' 'main   hero' 'main   hero' 'footer hero'; }
+  .wrapper header {
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    height: 20rem;
+    padding: 0 15rem; }
+    .wrapper header img {
+      width: 25vw;
+      max-width: 175px; }
+  .wrapper .hero {
+    grid-area: hero; }
+    .wrapper .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .wrapper main {
+    grid-area: main;
+    padding: 0 15rem;
+    max-width: 100rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #413a3a; }
+    .wrapper main .coming-soon {
       text-transform: uppercase;
-      letter-spacing: 1rem;
-      line-height: 4rem;
-      padding-bottom: 2rem;
-      font-size: 4rem;
-      font-weight: 600; }
-      .main-container__column-one .content h1 .text-highlight {
+      font-size: 3vw;
+      letter-spacing: 1.5rem;
+      line-height: 1; }
+      .wrapper main .coming-soon .coming-soon-highlight {
         font-weight: 300;
         color: #ce9797; }
-    .main-container__column-one .content p {
+    .wrapper main .body-copy {
       color: #ce9797;
+      font-size: 1.5rem;
+      padding: 2rem 0; }
+    .wrapper main .email-form {
+      margin: 0;
+      padding: 0; }
+      .wrapper main .email-form form {
+        display: flex;
+        align-items: center;
+        position: relative; }
+        .wrapper main .email-form form input {
+          width: 100%;
+          padding: 1.5rem;
+          border: 1px solid #ce9797;
+          border-radius: 2.1rem;
+          font-size: 1.5rem;
+          font-weight: 300; }
+          .wrapper main .email-form form input::placeholder {
+            color: #ce9797;
+            font-size: 1.5rem;
+            font-weight: 300; }
+        .wrapper main .email-form form label {
+          display: none; }
+        .wrapper main .email-form form button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 7.5rem;
+          height: 4.75rem;
+          border: none;
+          border-radius: 2.1rem;
+          background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+          box-shadow: 0px 5px 7px #f96262;
+          transition: box-shadow 0.5s;
+          position: absolute;
+          right: 0; }
+          .wrapper main .email-form form button:hover {
+            box-shadow: 0px 5px 7px #413a3a;
+            cursor: pointer; }
+        .wrapper main .email-form form .email-reject-img {
+          position: absolute;
+          right: 10rem; }
+        .wrapper main .email-form form .red-border {
+          border: 1px solid #f96262; }
+      .wrapper main .email-form .email-reject-text p {
+        padding-left: 1.5rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: #413a3a;
+        color: #f96262; }
+      .wrapper main .email-form .hidden {
+        visibility: hidden; }
+  .wrapper footer {
+    grid-area: footer;
+    color: #ce9797;
+    padding: 0 15rem; }
+    .wrapper footer .attribution a {
+      color: #ce9797;
+      text-decoration: none; }
+      .wrapper footer .attribution a:hover {
+        color: #f96262;
+        text-decoration: underline;
+        cursor: pointer; }
+
+@media all and (max-width: 750px) {
+  body {
+    background: linear-gradient(135deg, white, #fff5f5); }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem auto auto auto;
+    grid-template-areas: 'header' 'hero' 'main' 'footer'; }
+    .wrapper header {
+      display: grid;
+      align-items: center;
+      height: unset;
+      padding: 0 4rem; }
+    .wrapper main {
+      grid-area: main;
+      text-align: center;
+      padding: 5rem 4rem;
+      font-family: 'Josefin Sans', sans-serif;
       font-size: 1rem;
-      width: 28rem;
-      line-height: 2rem;
-      font-weight: 400; }
-  .main-container__column-two {
-    background-image: url("../images/hero-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 40%;
-    height: 100%; }
+      font-weight: 400;
+      color: #413a3a; }
+      .wrapper main .coming-soon {
+        font-size: 2rem;
+        letter-spacing: 1.25rem;
+        line-height: 1; }
+      .wrapper main .body-copy {
+        color: #ce9797;
+        font-size: 1.5rem;
+        padding: 1.5rem 0; }
+    .wrapper footer {
+      text-align: center;
+      margin: 0;
+      padding: 0 4rem; } }

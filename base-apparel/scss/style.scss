@@ -1,81 +1,237 @@
 $bg-pattern: url('../images/bg-pattern-desktop.svg');
-$light-gradient: linear-gradient(135deg,
-hsl(0, 0%, 100%),
-hsl(0, 100%, 98%));
 $hero-desktop: url('../images/hero-desktop.jpg');
+$light-gradient: linear-gradient(135deg,
+  hsl(0, 0%, 100%),
+  hsl(0, 100%, 98%));
+$heavy-gradient:linear-gradient(135deg,
+  hsl(0, 80%, 86%),
+  hsl(0, 74%, 74%));
 $desaturated-red: hsl(0, 36%, 70%);
+$dark-grayish-red: hsl(0, 6%, 24%);
+$soft-red: hsl(0, 93%, 68%);
+
+// breakpoints
+$breakpoint-large: 1440px;
+$breakpoint-medium: 1024px;
+$breakpoint-small: 750px;
+$breakpoint-xsmall: 375px;
+$breakpoint-xxsmall: 250px;
+
+// base apparels styles
+@mixin mainFont($weight, $size) {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $dark-grayish-red;
+}
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2rem;
-  height: 100%;
+  width: 100%;
+  height: 100vh;
+  background-image: $bg-pattern;
+  background-size: 60% 100%;
 }
 
-.main-container {
-  min-height: 100vh;
-  width: 100vw;
-  background: $light-gradient;
-  display: flex;
-  flex-direction: row;
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+    'header hero'
+    'main   hero'
+    'main   hero'
+    'footer hero';
 
-  &__column-one {
-    padding-left: 16rem;
-    background-image: $bg-pattern;
-    background-size: cover;
-    width: 60%;
+  header {
+    grid-area: header;
+    display: grid;
+    align-items: center;
+    height: 20rem;
+    padding: 0 15rem;
 
-    .header {
-      padding-top: 5rem;
-      padding-bottom: 8rem;
+    img {
+      width: 25vw;
+      max-width: 175px;
+    }
+  }
+
+  .hero {
+    grid-area: hero;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  main {
+    grid-area: main;
+    padding: 0 15rem;
+    max-width: 100rem;
+    @include mainFont(400, 1rem);
+
+    .coming-soon {
+      text-transform: uppercase;
+      font-size: 3vw;
+      letter-spacing: 1.5rem;
+      line-height: 1;
+
+      .coming-soon-highlight {
+        font-weight: 300;
+        color: $desaturated-red;
+      }
     }
 
-    .content {
-      h1 {
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: column;
-        text-transform: uppercase;
-        letter-spacing: 1rem;
-        line-height: 4rem;
-        padding-bottom: 2rem;
-        font-size: 4rem;
-        font-weight: 600;
+    .body-copy {
+      color: $desaturated-red;
+      font-size: 1.5rem;
+      padding: 2rem 0;
+    }
 
-        .text-highlight {
+    .email-form {
+      margin: 0;
+      padding: 0;
+
+      form {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        input {
+          width: 100%;
+          padding: 1.5rem;
+          border: 1px solid $desaturated-red;
+          border-radius: 2.1rem;
+          font-size: 1.5rem;
           font-weight: 300;
-          color: $desaturated-red;
+
+          &::placeholder {
+            color: $desaturated-red;
+            font-size: 1.5rem;
+            font-weight: 300;
+          }
+        }
+
+        label {
+          display: none;
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 7.5rem;
+          height: 4.75rem;
+          border: none;
+          border-radius: 2.1rem;
+          background: $heavy-gradient;
+          box-shadow: 0px 5px 7px $soft-red;
+          transition: box-shadow 0.5s;
+          position: absolute;
+          right: 0;
+
+          &:hover {
+            box-shadow: 0px 5px 7px $dark-grayish-red;
+            cursor: pointer;
+          }
+        }
+
+        .email-reject-img {
+          position: absolute;
+          right: 10rem;
+        }
+
+        .red-border {
+          border: 1px solid $soft-red;
         }
       }
 
-      p {
-        color: $desaturated-red;
-        font-size: 1rem;
-        width: 28rem;
-        line-height: 2rem;
-        font-weight: 400;
+      .email-reject-text p {
+        padding-left: 1.5rem;
+        @include mainFont(400, 1rem);
+        color: $soft-red;
+      }
+
+      .hidden {
+        visibility: hidden;
       }
     }
   }
 
+  footer {
+    grid-area: footer;
+    color: $desaturated-red;
+    padding: 0 15rem;
 
-  &__column-two {
-    background-image: $hero-desktop;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 40%;
-    height: 100%;
+    .attribution {
+      a {
+        color: $desaturated-red;
+        text-decoration: none;
+
+        &:hover {
+          color: $soft-red;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
 
+@media all and (max-width: $breakpoint-small) {
+  body {
+    background: $light-gradient;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem auto auto auto;
+    grid-template-areas: 'header'
+      'hero'
+      'main'
+      'footer';
+
+    header {
+      display: grid;
+      align-items: center;
+      height: unset;
+      padding: 0 4rem;
+    }
+
+    main {
+      grid-area: main;
+      text-align: center;
+      padding: 5rem 4rem;
+      @include mainFont(400, 1rem);
+
+      .coming-soon {
+        font-size: 2rem;
+        letter-spacing: 1.25rem;
+        line-height: 1;
+      }
+
+      .body-copy {
+        color: $desaturated-red;
+        font-size: 1.5rem;
+        padding: 1.5rem 0;
+      }
+    }
+
+    footer {
+      text-align: center;
+      margin: 0;
+      padding: 0 4rem;
+    }
+  }
+}
 
 
 // <style>

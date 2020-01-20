@@ -1,66 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="./images/favicon-32x32.png"
-		/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
 
-		<meta
-			name="description"
-			content="Frontend Mentor | Base Apparel coming soon page"
-		/>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta name="description" content="Frontend Mentor | Base Apparel coming soon page" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+  </head>
 
-		<title>Frontend Mentor | Base Apparel coming soon page</title>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="company logo" />
+        </div>
+      </header>
+      <div class="hero">
+        <img src="./images/hero-desktop.jpg" alt="A model wearing an orange short sleeve shirt" id="hero-img">
+      </div>
+      <main>
+        <div class="coming-soon">
+          <h1>
+            <span class="coming-soon-highlight">We're</span> <br /> coming <br />soon </h1>
+        </div>
+        <div class="body-copy">
+          <p> Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay
+            up-to-date with announcements and our launch deals. </p>
+        </div>
+        <div class="email-form">
+          <form id="form" novalidate>
+            <input type="email" id="email" aria-label="email address" placeholder="Email Address"
+              class="email border" />
+            <label for="email" id="email-label">Email Address</label>
+            <button type="submit" aria-label="submit button">
+              <img src="/images/icon-arrow.svg" alt="submit icon">
+            </button>
+            <div id="email-reject-img" class="email-reject-img hidden">
+              <img src="./images/icon-error.svg" alt="error icon">
+            </div>
+          </form>
+          <div id="email-reject-text" class="email-reject-text hidden">
+            <p> Please use a valid email address</p>
+          </div>
+        </div>
+      </main>
+      <footer class="main-container__footer">
+        <p> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor </a>
+          Coded by <a class="link" href="https://github.com/missating" target="_blank"> Vanessa Ating</a>. </p>
+      </footer>
+    </div>
+    <script src="./app.js"></script>
+  </body>
 
-		<link
-			href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap"
-			rel="stylesheet"
-		/>
-
-		<link
-			rel="stylesheet"
-			type="text/css"
-			href="css/style.css"
-			media="screen"
-		/>
-	</head>
-	<body>
-		<main class="main-container">
-			<section class="main-container__column-one">
-				<header class="header">
-					<img src="./images/logo.svg" alt="base apparel logo" />
-				</header>
-				<section class="content">
-					<h1>
-						<span class="text-highlight">we're</span>
-						<span>coming </span>
-						<span>soon</span>
-					</h1>
-					<p>
-						Hello fellow shoppers! We're currently building our new fashion
-						store. Add your email below to stay up-to-date with announcements
-						and our launch deals.
-					</p>
-					<button>Example</button>
-				</section>
-			</section>
-			<section class="main-container__column-two"></section>
-		</main>
-
-		<!-- 
-  Email Address
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer> -->
-	</body>
 </html>
