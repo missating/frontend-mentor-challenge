@@ -13,34 +13,29 @@
   </head>
 
   <body>
-    <div class="wrapper">
+    <div class="main-container">
       <header>
-        <div class="logo">
-          <img src="./images/logo.svg" alt="company logo" />
-        </div>
+        <img src="./images/logo.svg" alt="company logo" />
       </header>
       <div class="hero">
-        <img src="./images/hero-desktop.jpg" alt="A model wearing an orange short sleeve shirt" id="hero-img">
       </div>
       <main>
-        <div class="coming-soon">
+        <div class="container-text-heading">
           <h1>
-            <span class="coming-soon-highlight">We're</span> <br /> coming <br />soon </h1>
+            <span class="text-heading-highlight">We're</span> coming soon </h1>
         </div>
-        <div class="body-copy">
+        <div class="container-text-content">
           <p> Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay
             up-to-date with announcements and our launch deals. </p>
         </div>
-        <div class="email-form">
-          <form id="form" novalidate>
-            <input type="email" id="email" aria-label="email address" placeholder="Email Address"
-              class="email border" />
-            <label for="email" id="email-label">Email Address</label>
-            <button type="submit" aria-label="submit button">
-              <img src="/images/icon-arrow.svg" alt="submit icon">
+        <div class="form-container">
+          <form id="form">
+            <input type="email" aria-labelledby="email address" placeholder="Email Address" class="email border" />
+            <button type="submit" aria-labelledby="submit button">
+              <img src="./images/icon-arrow.svg" alt="right arrow submit icon">
             </button>
-            <div id="email-reject-img" class="email-reject-img hidden">
-              <img src="./images/icon-error.svg" alt="error icon">
+            <div id="email-reject-icon" class="email-reject-icon hidden">
+              <img src="./images/icon-error.svg" alt="error icon for invalid email address">
             </div>
           </form>
           <div id="email-reject-text" class="email-reject-text hidden">
@@ -48,12 +43,11 @@
           </div>
         </div>
       </main>
-      <footer class="main-container__footer">
+      <footer class="footer">
         <p> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor </a>
           Coded by <a class="link" href="https://github.com/missating" target="_blank"> Vanessa Ating</a>. </p>
       </footer>
     </div>
-    <script src="./app.js"></script>
   </body>
 
 </html>

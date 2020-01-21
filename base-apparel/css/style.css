@@ -9,138 +9,135 @@ body {
   background-image: url("../images/bg-pattern-desktop.svg");
   background-size: 60% 100%; }
 
-.wrapper {
+.main-container {
   height: 100vh;
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-areas: 'header hero' 'main   hero' 'main   hero' 'footer hero'; }
-  .wrapper header {
+  .main-container header {
     grid-area: header;
     display: grid;
     align-items: center;
-    height: 20rem;
+    height: 15rem;
     padding: 0 15rem; }
-    .wrapper header img {
-      width: 25vw;
-      max-width: 175px; }
-  .wrapper .hero {
-    grid-area: hero; }
-    .wrapper .hero img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-  .wrapper main {
+  .main-container .hero {
+    grid-area: hero;
+    background-image: url(../images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .main-container main {
     grid-area: main;
     padding: 0 15rem;
     max-width: 100rem;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-weight: 400;
     color: #413a3a; }
-    .wrapper main .coming-soon {
+    .main-container main .container-text-heading h1 {
       text-transform: uppercase;
-      font-size: 3vw;
-      letter-spacing: 1.5rem;
+      font-size: 5rem;
+      letter-spacing: 1rem;
       line-height: 1; }
-      .wrapper main .coming-soon .coming-soon-highlight {
+      .main-container main .container-text-heading h1 .text-heading-highlight {
         font-weight: 300;
         color: #ce9797; }
-    .wrapper main .body-copy {
-      color: #ce9797;
-      font-size: 1.5rem;
+    .main-container main .container-text-content {
       padding: 2rem 0; }
-    .wrapper main .email-form {
-      margin: 0;
-      padding: 0; }
-      .wrapper main .email-form form {
+      .main-container main .container-text-content p {
+        color: #ce9797;
+        font-size: 1.2rem;
+        line-height: 1.5; }
+    .main-container main .form-container form {
+      display: flex;
+      align-items: center;
+      position: relative; }
+      .main-container main .form-container form input {
+        width: 100%;
+        padding: 1.3rem;
+        border: 1px solid #ce9797;
+        border-radius: 2rem;
+        font-size: 1rem;
+        font-weight: 300; }
+        .main-container main .form-container form input::placeholder {
+          color: #EFDBDD;
+          font-size: 1rem;
+          font-weight: 400; }
+      .main-container main .form-container form button {
         display: flex;
         align-items: center;
-        position: relative; }
-        .wrapper main .email-form form input {
-          width: 100%;
-          padding: 1.5rem;
-          border: 1px solid #ce9797;
-          border-radius: 2.1rem;
-          font-size: 1.5rem;
-          font-weight: 300; }
-          .wrapper main .email-form form input::placeholder {
-            color: #ce9797;
-            font-size: 1.5rem;
-            font-weight: 300; }
-        .wrapper main .email-form form label {
-          display: none; }
-        .wrapper main .email-form form button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 7.5rem;
-          height: 4.75rem;
-          border: none;
-          border-radius: 2.1rem;
-          background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-          box-shadow: 0px 5px 7px #f96262;
-          transition: box-shadow 0.5s;
-          position: absolute;
-          right: 0; }
-          .wrapper main .email-form form button:hover {
-            box-shadow: 0px 5px 7px #413a3a;
-            cursor: pointer; }
-        .wrapper main .email-form form .email-reject-img {
-          position: absolute;
-          right: 10rem; }
-        .wrapper main .email-form form .red-border {
-          border: 1px solid #f96262; }
-      .wrapper main .email-form .email-reject-text p {
-        padding-left: 1.5rem;
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 1rem;
-        font-weight: 400;
-        color: #413a3a;
-        color: #f96262; }
-      .wrapper main .email-form .hidden {
-        visibility: hidden; }
-  .wrapper footer {
+        justify-content: center;
+        width: 7.5rem;
+        height: 3.75rem;
+        border: none;
+        border-radius: 2rem;
+        background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+        box-shadow: 0px 3px 3px #f96262;
+        transition: box-shadow 0.5s;
+        position: absolute;
+        right: 0; }
+        .main-container main .form-container form button:hover {
+          box-shadow: 0px 3px 3px #413a3a;
+          cursor: pointer; }
+      .main-container main .form-container form .email-reject-icon {
+        position: absolute;
+        right: 10rem; }
+      .main-container main .form-container form .red-border {
+        border: 1px solid #f96262; }
+    .main-container main .form-container .email-reject-text p {
+      padding-left: 1.5rem;
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #413a3a;
+      color: #f96262; }
+    .main-container main .form-container .hidden {
+      visibility: hidden; }
+  .main-container footer {
     grid-area: footer;
-    color: #ce9797;
-    padding: 0 15rem; }
-    .wrapper footer .attribution a {
+    padding: 0 15rem;
+    font-size: 1rem;
+    text-align: center; }
+    .main-container footer a {
       color: #ce9797;
-      text-decoration: none; }
-      .wrapper footer .attribution a:hover {
-        color: #f96262;
-        text-decoration: underline;
-        cursor: pointer; }
+      cursor: pointer; }
 
-@media all and (max-width: 750px) {
+@media (max-width: 1024px) {
   body {
-    background: linear-gradient(135deg, white, #fff5f5); }
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10rem auto auto auto;
+    background: linear-gradient(135deg, #fff5f5, white); }
+  .main-container {
+    grid-template-columns: 2fr;
+    grid-template-rows: 5rem 30rem auto auto;
     grid-template-areas: 'header' 'hero' 'main' 'footer'; }
-    .wrapper header {
-      display: grid;
-      align-items: center;
+    .main-container header {
+      grid-area: header;
       height: unset;
-      padding: 0 4rem; }
-    .wrapper main {
+      padding: 0 0 0 2rem; }
+    .main-container .hero {
+      grid-area: hero;
+      background-image: url(../images/hero-mobile.jpg); }
+    .main-container main {
       grid-area: main;
+      padding: 0;
       text-align: center;
-      padding: 5rem 4rem;
       font-family: 'Josefin Sans', sans-serif;
       font-size: 1rem;
       font-weight: 400;
       color: #413a3a; }
-      .wrapper main .coming-soon {
-        font-size: 2rem;
-        letter-spacing: 1.25rem;
-        line-height: 1; }
-      .wrapper main .body-copy {
-        color: #ce9797;
-        font-size: 1.5rem;
-        padding: 1.5rem 0; }
-    .wrapper footer {
-      text-align: center;
+      .main-container main .container-text-heading {
+        padding: 6rem 4rem 3rem 2rem; }
+        .main-container main .container-text-heading h1 {
+          font-size: 3rem; }
+      .main-container main .container-text-content {
+        padding-right: 2rem;
+        padding-left: 2rem; }
+      .main-container main .form-container {
+        padding: 0 2rem 0 2rem; }
+        .main-container main .form-container form input {
+          padding: 0.8rem; }
+        .main-container main .form-container form button {
+          width: 4rem;
+          height: 2.75rem; }
+    .main-container footer {
       margin: 0;
-      padding: 0 4rem; } }
+      padding: 2rem 4rem;
+      grid-area: footer; } }

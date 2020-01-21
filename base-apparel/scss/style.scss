@@ -1,8 +1,7 @@
 $bg-pattern: url('../images/bg-pattern-desktop.svg');
 $hero-desktop: url('../images/hero-desktop.jpg');
 $light-gradient: linear-gradient(135deg,
-  hsl(0, 0%, 100%),
-  hsl(0, 100%, 98%));
+  hsl(0, 100%, 98%), hsl(0, 0%, 100%));
 $heavy-gradient:linear-gradient(135deg,
   hsl(0, 80%, 86%),
   hsl(0, 74%, 74%));
@@ -10,14 +9,7 @@ $desaturated-red: hsl(0, 36%, 70%);
 $dark-grayish-red: hsl(0, 6%, 24%);
 $soft-red: hsl(0, 93%, 68%);
 
-// breakpoints
-$breakpoint-large: 1440px;
-$breakpoint-medium: 1024px;
-$breakpoint-small: 750px;
-$breakpoint-xsmall: 375px;
-$breakpoint-xxsmall: 250px;
 
-// base apparels styles
 @mixin mainFont($weight, $size) {
   font-family: 'Josefin Sans', sans-serif;
   font-size: $size;
@@ -38,7 +30,7 @@ body {
   background-size: 60% 100%;
 }
 
-.wrapper {
+.main-container {
   height: 100vh;
   display: grid;
   grid-template-columns: 60% 40%;
@@ -52,53 +44,48 @@ body {
     grid-area: header;
     display: grid;
     align-items: center;
-    height: 20rem;
+    height: 15rem;
     padding: 0 15rem;
-
-    img {
-      width: 25vw;
-      max-width: 175px;
-    }
   }
 
   .hero {
     grid-area: hero;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    background-image: url(../images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   main {
     grid-area: main;
     padding: 0 15rem;
     max-width: 100rem;
-    @include mainFont(400, 1rem);
+    @include mainFont(400, 0.5rem);
 
-    .coming-soon {
-      text-transform: uppercase;
-      font-size: 3vw;
-      letter-spacing: 1.5rem;
-      line-height: 1;
+    .container-text-heading {
+      h1 {
+        text-transform: uppercase;
+        font-size: 5rem;
+        letter-spacing: 1rem;
+        line-height: 1;
 
-      .coming-soon-highlight {
-        font-weight: 300;
-        color: $desaturated-red;
+        .text-heading-highlight {
+          font-weight: 300;
+          color: $desaturated-red;
+        }
       }
     }
 
-    .body-copy {
-      color: $desaturated-red;
-      font-size: 1.5rem;
+    .container-text-content {
       padding: 2rem 0;
+
+      p {
+        color: $desaturated-red;
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
     }
 
-    .email-form {
-      margin: 0;
-      padding: 0;
-
+    .form-container {
       form {
         display: flex;
         align-items: center;
@@ -106,21 +93,17 @@ body {
 
         input {
           width: 100%;
-          padding: 1.5rem;
+          padding: 1.3rem;
           border: 1px solid $desaturated-red;
-          border-radius: 2.1rem;
-          font-size: 1.5rem;
+          border-radius: 2rem;
+          font-size: 1rem;
           font-weight: 300;
 
           &::placeholder {
-            color: $desaturated-red;
-            font-size: 1.5rem;
-            font-weight: 300;
+            color: #EFDBDD;
+            font-size: 1rem;
+            font-weight: 400;
           }
-        }
-
-        label {
-          display: none;
         }
 
         button {
@@ -128,22 +111,22 @@ body {
           align-items: center;
           justify-content: center;
           width: 7.5rem;
-          height: 4.75rem;
+          height: 3.75rem;
           border: none;
-          border-radius: 2.1rem;
+          border-radius: 2rem;
           background: $heavy-gradient;
-          box-shadow: 0px 5px 7px $soft-red;
+          box-shadow: 0px 3px 3px $soft-red;
           transition: box-shadow 0.5s;
           position: absolute;
           right: 0;
 
           &:hover {
-            box-shadow: 0px 5px 7px $dark-grayish-red;
+            box-shadow: 0px 3px 3px $dark-grayish-red;
             cursor: pointer;
           }
         }
 
-        .email-reject-img {
+        .email-reject-icon {
           position: absolute;
           right: 10rem;
         }
@@ -167,74 +150,82 @@ body {
 
   footer {
     grid-area: footer;
-    color: $desaturated-red;
     padding: 0 15rem;
+    font-size: 1rem;
+    text-align: center;
 
-    .attribution {
-      a {
-        color: $desaturated-red;
-        text-decoration: none;
-
-        &:hover {
-          color: $soft-red;
-          text-decoration: underline;
-          cursor: pointer;
-        }
-      }
+    a {
+      color: $desaturated-red;
+      cursor: pointer;
     }
   }
 }
 
-@media all and (max-width: $breakpoint-small) {
+@media (max-width: 1024px) {
   body {
     background: $light-gradient;
   }
 
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 10rem auto auto auto;
+  .main-container {
+    grid-template-columns: 2fr;
+    grid-template-rows: 5rem 30rem auto auto;
     grid-template-areas: 'header'
       'hero'
       'main'
       'footer';
 
     header {
-      display: grid;
-      align-items: center;
+      grid-area: header;
       height: unset;
-      padding: 0 4rem;
+      padding: 0 0 0 2rem;
+    }
+
+    .hero {
+      grid-area: hero;
+      background-image: url(../images/hero-mobile.jpg);
     }
 
     main {
       grid-area: main;
+      padding: 0;
       text-align: center;
-      padding: 5rem 4rem;
       @include mainFont(400, 1rem);
 
-      .coming-soon {
-        font-size: 2rem;
-        letter-spacing: 1.25rem;
-        line-height: 1;
+      .container-text-heading {
+        padding: 6rem 4rem 3rem 2rem;
+
+        h1 {
+          font-size: 3rem;
+        }
       }
 
-      .body-copy {
-        color: $desaturated-red;
-        font-size: 1.5rem;
-        padding: 1.5rem 0;
+      .container-text-content {
+        padding-right: 2rem;
+        padding-left: 2rem;
+      }
+
+      .form-container {
+        padding: 0 2rem 0 2rem;
+
+        form {
+          input {
+            padding: 0.8rem;
+          }
+
+          button {
+            width: 4rem;
+            height: 2.75rem;
+          }
+        }
       }
     }
 
+
+
     footer {
-      text-align: center;
       margin: 0;
-      padding: 0 4rem;
+      padding: 2rem 4rem;
+      grid-area: footer;
     }
   }
 }
-
-
-// <style>
-// .attribution { font-size: 11px; text-align: center; }
-// .attribution a { color: hsl(228, 45%, 44%); }
-// </style>
