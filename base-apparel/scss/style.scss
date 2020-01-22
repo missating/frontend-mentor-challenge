@@ -126,18 +126,18 @@ body {
           }
         }
 
-        .email-reject-icon {
+        .email-error-icon {
           position: absolute;
           right: 10rem;
         }
 
-        .red-border {
+        .email-error-border {
           border: 1px solid $soft-red;
         }
       }
 
-      .email-reject-text p {
-        padding-left: 1.5rem;
+      .email-error-text p {
+        padding: 1rem 0 0 1.5rem;
         @include mainFont(400, 1rem);
         color: $soft-red;
       }

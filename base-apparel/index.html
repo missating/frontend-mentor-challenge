@@ -29,17 +29,17 @@
             up-to-date with announcements and our launch deals. </p>
         </div>
         <div class="form-container">
-          <form id="form">
-            <input type="email" aria-labelledby="email address" placeholder="Email Address" class="email border" />
-            <button type="submit" aria-labelledby="submit button">
+          <form>
+            <input type="email" class="email-box" aria-labelledby="email address" placeholder="Email Address" />
+            <button type="submit" aria-labelledby="submit">
               <img src="./images/icon-arrow.svg" alt="right arrow submit icon">
             </button>
-            <div id="email-reject-icon" class="email-reject-icon hidden">
+            <div class="email-error-icon hidden">
               <img src="./images/icon-error.svg" alt="error icon for invalid email address">
             </div>
           </form>
-          <div id="email-reject-text" class="email-reject-text hidden">
-            <p> Please use a valid email address</p>
+          <div class="email-error-text hidden">
+            <p> Please provide a valid email</p>
           </div>
         </div>
       </main>
@@ -48,6 +48,7 @@
           Coded by <a class="link" href="https://github.com/missating" target="_blank"> Vanessa Ating</a>. </p>
       </footer>
     </div>
+    <script src="./js/main.js"></script>
   </body>
 
 </html>
