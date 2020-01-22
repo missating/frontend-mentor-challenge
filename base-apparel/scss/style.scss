@@ -1,5 +1,6 @@
 $bg-pattern: url('../images/bg-pattern-desktop.svg');
 $hero-desktop: url('../images/hero-desktop.jpg');
+$hero-mobile: url('../images/hero-mobile.jpg');
 $light-gradient: linear-gradient(135deg,
   hsl(0, 100%, 98%), hsl(0, 0%, 100%));
 $heavy-gradient:linear-gradient(135deg,
@@ -50,7 +51,7 @@ body {
 
   .hero {
     grid-area: hero;
-    background-image: url(../images/hero-desktop.jpg);
+    background-image: $hero-desktop;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -182,7 +183,7 @@ body {
 
     .hero {
       grid-area: hero;
-      background-image: url(../images/hero-mobile.jpg);
+      background-image: $hero-mobile;
     }
 
     main {
@@ -219,8 +220,6 @@ body {
         }
       }
     }
-
-
 
     footer {
       margin: 0;
