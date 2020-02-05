@@ -1,7 +1,7 @@
 {
   "name": "pricing-component-with-toggle-master",
   "version": "1.0.0",
-  "description": "Frontend Mentor Challenge",
+  "description": "Frontend Mentor Challenge 1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
