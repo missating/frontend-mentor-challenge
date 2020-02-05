@@ -8,4 +8,6 @@ Thanks for checking out this front-end coding challenge.
 
 **To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
 
-My solutions to the Frontend Mentor Challenge can also be found on my codepen https://codepen.io/missating
+# Demo
+
+To view my solutions to the Frontend Mentor Challenges check my codepen https://codepen.io/collection/DxPzGk
