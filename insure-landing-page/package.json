@@ -1,0 +1,22 @@
+{
+  "name": "insure-landing-page",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Challenge 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/missating/frontend-mentor-challenge.git"
+  },
+  "author": "Vanessa Ating <atingenkay@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/missating/frontend-mentor-challenge/issues"
+  },
+  "homepage": "https://github.com/missating/frontend-mentor-challenge#readme",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}
