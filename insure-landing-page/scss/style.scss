@@ -1,11 +1,110 @@
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+@import "mixins";
+@import "animations";
+
+$dark-violet: hsl(256, 26%, 20%);
+$grayish-blue: hsl(216, 30%, 68%);
+$very-dark-violet: hsl(270, 9%, 17%);
+$dark-grayish-violet: hsl(273, 4%, 51%);
+$very-light-gray: hsl(0, 0%, 98%);
+$white: #fff;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: red;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  height: 100%;
 }
+
+.container {
+  @include respond(medium) {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  @include respond(large) {
+    max-width: 1112px;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+  }
+
+  &__nav {
+    &__items {
+      li {
+        text-decoration: none;
+        text-transform: uppercase;
+        list-style: none;
+      }
+    }
+  }
+
+  @include respond(medium) {
+    &__nav {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      background-color: $dark-grayish-violet;
+      padding: 2.5rem 1.5rem 0 2.5rem;
+      z-index: 999;
+      visibility: hidden;
+
+      & .nav-open {
+        display: block;
+      }
+    }
+  }
+
+  @include respond(large) {
+    background-color: $white;
+    width: 100%;
+
+    &__hamburger {
+      display: none;
+    }
+
+    &__nav {
+      &__items {
+        display: flex;
+      }
+    }
+  }
+}
+
+.main {
+  &__content {
+    background-color: $dark-violet;
+
+    @include respond(medium) {
+      &__content {
+        .container {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+// .attribution {
+//   font-size: 11px;
+//   text-align: center;
+// }
+// .attribution a {
+//   color: hsl(228, 45%, 44%);
+// }
