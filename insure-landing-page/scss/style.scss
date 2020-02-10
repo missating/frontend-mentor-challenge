@@ -1,12 +1,16 @@
 @import "mixins";
 @import "animations";
 
+// colors
 $dark-violet: hsl(256, 26%, 20%);
 $grayish-blue: hsl(216, 30%, 68%);
 $very-dark-violet: hsl(270, 9%, 17%);
 $dark-grayish-violet: hsl(273, 4%, 51%);
 $very-light-gray: hsl(0, 0%, 98%);
 $white: #fff;
+
+// images
+$bg-img-mobile-left: url("../images/bg-pattern-intro-left-mobile.svg");
 
 * {
   margin: 0;
@@ -21,80 +25,46 @@ body {
   height: 100%;
 }
 
-.container {
-  @include respond(medium) {
-    width: 85%;
-    margin: 0 auto;
-  }
-
-  @include respond(large) {
-    max-width: 1112px;
-    margin: 0 auto;
-  }
-}
-
 .header {
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 0;
-    position: relative;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.0625rem 8.3125rem;
+  position: relative;
+  z-index: 999;
+
+  &__hamburger-toggle {
+    display: none;
   }
 
   &__nav {
     &__items {
+      display: flex;
+
       li {
-        text-decoration: none;
+        list-style-type: none;
+        margin-left: 1rem;
         text-transform: uppercase;
-        list-style: none;
-      }
-    }
-  }
+        color: $dark-grayish-violet;
+        cursor: pointer;
 
-  @include respond(medium) {
-    &__nav {
-      width: 100vw;
-      height: 100vh;
-      position: absolute;
-      top: 5rem;
-      left: 0;
-      background-color: $dark-grayish-violet;
-      padding: 2.5rem 1.5rem 0 2.5rem;
-      z-index: 999;
-      visibility: hidden;
+        a {
+          &:hover {
+            color: $dark-violet;
+          }
+        }
 
-      & .nav-open {
-        display: block;
-      }
-    }
-  }
+        .active {
+          border: 0.125rem solid $dark-violet;
+          color: $dark-violet;
+          padding: 0.7rem 1.75rem;
+          transition: all 0.3s ease-in;
 
-  @include respond(large) {
-    background-color: $white;
-    width: 100%;
-
-    &__hamburger {
-      display: none;
-    }
-
-    &__nav {
-      &__items {
-        display: flex;
-      }
-    }
-  }
-}
-
-.main {
-  &__content {
-    background-color: $dark-violet;
-
-    @include respond(medium) {
-      &__content {
-        .container {
-          display: flex;
-          flex-direction: column;
+          &:hover {
+            background-color: $dark-violet;
+            color: $very-light-gray;
+          }
         }
       }
     }
