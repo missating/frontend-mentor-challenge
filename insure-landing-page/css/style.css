@@ -9,37 +9,129 @@
   padding: 0;
   box-sizing: border-box; }
 
-body {
+body,
+html {
   font-family: "Karla", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  height: 100%; }
+  background-color: #fafafa;
+  width: 100vw;
+  overflow-x: hidden; }
 
-.header {
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.0625rem 8.3125rem;
-  position: relative;
-  z-index: 999; }
-  .header__hamburger-toggle {
-    display: none; }
-  .header__nav__items {
-    display: flex; }
-    .header__nav__items li {
-      list-style-type: none;
-      margin-left: 1rem;
-      text-transform: uppercase;
-      color: #837d87;
+.container {
+  min-height: 100vh;
+  width: 100vw; }
+  .container .header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.0625rem 15.625rem;
+    position: relative;
+    z-index: 2; }
+    .container .header__hamburger-toggle {
+      display: none; }
+    .container .header__nav__items {
+      display: flex; }
+      .container .header__nav__items li {
+        list-style-type: none;
+        margin-left: 1rem;
+        text-transform: uppercase;
+        color: #837d87;
+        cursor: pointer; }
+        .container .header__nav__items li a:hover {
+          color: #2d2640; }
+        .container .header__nav__items li .active {
+          border: 0.125rem solid #2d2640;
+          color: #2d2640;
+          padding: 0.7rem 1.75rem;
+          transition: all 0.3s ease-in; }
+          .container .header__nav__items li .active:hover {
+            background-color: #2d2640;
+            color: #fafafa; }
+  .container .main__intro {
+    height: fit-content;
+    background-color: #2d2640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.625rem 15.625rem; }
+    .container .main__intro .left-decor-pattern {
+      position: absolute;
+      left: -0.3125rem;
+      top: 36.25rem; }
+    .container .main__intro .right-decor-pattern {
+      position: absolute;
+      top: 5.5rem;
+      right: 0.0625rem;
+      z-index: 1; }
+    .container .main__intro .intro-text .hr {
+      height: 0.0625rem;
+      width: 10rem;
+      background-color: #fafafa;
+      margin-bottom: 4.8125rem; }
+    .container .main__intro .intro-text h1 {
+      font-size: 5rem;
+      line-height: 5rem;
+      color: #fafafa; }
+      .container .main__intro .intro-text h1 span {
+        display: block; }
+    .container .main__intro .intro-text p {
+      margin: 1.9375rem 0 2.375rem;
+      width: 34.375rem;
+      line-height: 1.5rem;
+      color: #fafafa;
+      opacity: 0.8; }
+    .container .main__intro .intro-text .intro-link {
+      color: #fafafa;
+      padding: 0.9375rem 1.75rem;
+      border: 0.125rem solid #fafafa;
+      background-color: transparent;
+      transition: all 0.3s ease-in;
+      width: fit-content;
+      font-weight: bold;
+      margin-bottom: 1.4375rem;
       cursor: pointer; }
-      .header__nav__items li a:hover {
+      .container .main__intro .intro-text .intro-link:hover {
+        background-color: #fafafa;
         color: #2d2640; }
-      .header__nav__items li .active {
-        border: 0.125rem solid #2d2640;
-        color: #2d2640;
-        padding: 0.7rem 1.75rem;
-        transition: all 0.3s ease-in; }
-        .header__nav__items li .active:hover {
-          background-color: #2d2640;
-          color: #fafafa; }
+    .container .main__intro .intro-img-mobile {
+      display: none; }
+    .container .main__intro .intro-img-desktop {
+      position: relative;
+      top: 8.75rem;
+      right: -0.625rem; }
+
+@media (max-width: 1200px) {
+  .container .header {
+    padding: 0; }
+    .container .header__hamburger-toggle {
+      display: block; }
+    .container .header__nav {
+      display: none; }
+  .container .main__intro {
+    flex-direction: column-reverse;
+    padding: 0; }
+    .container .main__intro .left-decor-pattern {
+      display: none; }
+    .container .main__intro .right-decor-pattern {
+      display: none; }
+    .container .main__intro .intro-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .container .main__intro .intro-text .hr {
+        display: none; }
+      .container .main__intro .intro-text h1 {
+        font-size: 1rem; }
+      .container .main__intro .intro-text p {
+        margin: 0; }
+    .container .main__intro .intro-img-mobile {
+      display: block; }
+      .container .main__intro .intro-img-mobile img {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh; }
+    .container .main__intro .intro-img-desktop {
+      display: none; } }

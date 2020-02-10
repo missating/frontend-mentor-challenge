@@ -24,48 +24,64 @@
     />
   </head>
   <body>
-    <header class="header">
-      <a class="header__logo">
-        <img src="./images/logo.svg" alt="insure logo" />
-      </a>
-      <button class="header__hamburger-toggle">
-        <img
-          class="header__hamburger"
-          src="./images/icon-hamburger.svg"
-          alt="hamburger navigation icon"
-        />
-      </button>
-      <nav class="header__nav">
-        <ul class="header__nav__items">
-          <li><a>How we work</a></li>
-          <li><a>Blog</a></li>
-          <li><a>Account</a></li>
-          <li><a class="active">View Plans</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="main">
-      <section class="main__content">
-        <div class="intro-text">
-          <h1>
-            <span>Humanizing</span>
-            <span>your insurance.</span>
-          </h1>
-          <p>
-            Get your life insurance coverage easier and faster. We blend our
-            expertise and technology to help you find the plan that’s right for
-            you. Ensure you and your loved ones are protected.
-          </p>
-          <a class="intro-link">View Plans</a>
-        </div>
-        <div class="intro-img">
-          <img src="./images/image-intro-desktop.jpg" />
-        </div>
-      </section>
-      <section>
-        About section
-      </section>
-    </main>
+    <div class="container">
+      <header class="header">
+        <a class="header__logo">
+          <img src="./images/logo.svg" alt="insure logo" />
+        </a>
+        <button class="header__hamburger-toggle">
+          <img
+            class="header__hamburger"
+            src="./images/icon-hamburger.svg"
+            alt="hamburger navigation icon"
+          />
+        </button>
+        <nav class="header__nav">
+          <ul class="header__nav__items">
+            <li><a>How we work</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Account</a></li>
+            <li><a class="active">View Plans</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="main__intro">
+          <img
+            class="left-decor-pattern"
+            src="images/bg-pattern-intro-left-desktop.svg"
+            alt="insure decoration pattern"
+          />
+          <div class="intro-text">
+            <div class="hr"></div>
+            <h1>
+              <span>Humanizing</span>
+              <span>your insurance.</span>
+            </h1>
+            <p>
+              Get your life insurance coverage easier and faster. We blend our
+              expertise and technology to help you find the plan that’s right
+              for you. Ensure you and your loved ones are protected.
+            </p>
+            <a class="intro-link">View Plans</a>
+          </div>
+          <div class="intro-img-desktop">
+            <img src="./images/image-intro-desktop.jpg" />
+          </div>
+          <div class="intro-img-mobile">
+            <img src="./images/image-intro-mobile.jpg" />
+          </div>
+          <img
+            class="right-decor-pattern"
+            src="images/bg-pattern-intro-right-desktop.svg"
+            alt="insure decoration pattern"
+          />
+        </section>
+        <section>
+          About section
+        </section>
+      </main>
+    </div>
 
     <!-- How we work Blog Account View plans Humanizing your insurance. Get your life
     insurance coverage easier and faster. We blend our expertise and technology
