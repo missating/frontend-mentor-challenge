@@ -247,25 +247,7 @@ html {
 
           p {
             margin: 0;
-            // width: 34.375rem;
           }
-
-          // .intro-link {
-          //   color: $very-light-gray;
-          //   padding: 0.9375rem 1.75rem;
-          //   border: 0.125rem solid $very-light-gray;
-          //   background-color: transparent;
-          //   transition: all 0.3s ease-in;
-          //   width: fit-content;
-          //   font-weight: bold;
-          //   margin-bottom: 1.4375rem;
-          //   cursor: pointer;
-
-          //   &:hover {
-          //     background-color: $very-light-gray;
-          //     color: $dark-violet;
-          //   }
-          // }
         }
 
         .intro-img-mobile {
@@ -280,6 +262,44 @@ html {
 
         .intro-img-desktop {
           display: none;
+        }
+      }
+
+      &__about {
+        padding: 141px 33px 0;
+
+        .hr {
+          margin: 0 auto 30px;
+        }
+
+        h2 {
+          font-size: 2.9rem;
+          line-height: normal;
+          text-align: center;
+        }
+
+        .about-services {
+          flex-direction: column;
+          align-items: center;
+
+          div {
+            text-align: center;
+
+            img {
+              margin: 59px auto 36px;
+            }
+
+            h3 {
+              font-size: 2rem;
+              line-height: normal;
+              text-align: center;
+            }
+
+            p {
+              line-height: 1.5;
+              text-align: center;
+            }
+          }
         }
       }
     }
