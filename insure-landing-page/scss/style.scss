@@ -13,6 +13,22 @@ $very-light-gray: hsl(0, 0%, 98%);
   margin-bottom: 4.8125rem;
 }
 
+%generic-btn {
+  color: $very-light-gray;
+  border: 0.125rem solid $very-light-gray;
+  background-color: transparent;
+  transition: all 0.3s ease-in;
+  width: fit-content;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $very-light-gray;
+    color: $dark-violet;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -126,20 +142,9 @@ html {
         }
 
         .intro-link {
-          color: $very-light-gray;
+          @extend %generic-btn;
           padding: 0.9375rem 1.75rem;
-          border: 0.125rem solid $very-light-gray;
-          background-color: transparent;
-          transition: all 0.3s ease-in;
-          width: fit-content;
-          font-weight: bold;
           margin-bottom: 1.4375rem;
-          cursor: pointer;
-
-          &:hover {
-            background-color: $very-light-gray;
-            color: $dark-violet;
-          }
         }
       }
 
@@ -190,6 +195,47 @@ html {
             margin-top: 20px;
             line-height: 2;
           }
+        }
+      }
+    }
+
+    &__more {
+      padding: 0 250px;
+      position: relative;
+      margin-bottom: 160px;
+
+      .more-content {
+        background-color: $dark-violet;
+        padding: 77px 133px;
+        height: fit-content;
+        color: $very-light-gray;
+        display: flex;
+
+        h2 {
+          display: inline;
+          font-size: 3rem;
+          line-height: 1;
+
+          span {
+            display: block;
+          }
+        }
+
+        .more-link {
+          @extend %generic-btn;
+          position: relative;
+          margin: auto;
+          bottom: 4px;
+          left: 211px;
+          z-index: 2;
+          padding: 0.9375rem 1.75rem;
+        }
+
+        .more-desktop-img {
+          position: absolute;
+          top: 0;
+          right: 250px;
+          z-index: 1;
         }
       }
     }
@@ -299,6 +345,34 @@ html {
               line-height: 1.5;
               text-align: center;
             }
+          }
+        }
+      }
+
+      &__more {
+        padding: 100px 24px 0;
+
+        .more-content {
+          padding: 74px 40px 68px;
+          display: block;
+          background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+          background-repeat: no-repeat;
+          background-position: top right;
+
+          h2 {
+            padding: 0;
+            font-size: 2.4rem;
+            text-align: center;
+          }
+
+          .more-link {
+            display: block;
+            margin-top: 18px;
+            left: 0;
+          }
+
+          .more-desktop-img {
+            display: none;
           }
         }
       }

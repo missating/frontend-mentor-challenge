@@ -9,6 +9,19 @@
   width: 10rem;
   margin-bottom: 4.8125rem; }
 
+.container .main__intro .intro-text .intro-link, .container .main__more .more-content .more-link {
+  color: #fafafa;
+  border: 0.125rem solid #fafafa;
+  background-color: transparent;
+  transition: all 0.3s ease-in;
+  width: fit-content;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase; }
+  .container .main__intro .intro-text .intro-link:hover, .container .main__more .more-content .more-link:hover {
+    background-color: #fafafa;
+    color: #2d2640; }
+
 * {
   margin: 0;
   padding: 0;
@@ -85,18 +98,8 @@ html {
       color: #fafafa;
       opacity: 0.8; }
     .container .main__intro .intro-text .intro-link {
-      color: #fafafa;
       padding: 0.9375rem 1.75rem;
-      border: 0.125rem solid #fafafa;
-      background-color: transparent;
-      transition: all 0.3s ease-in;
-      width: fit-content;
-      font-weight: bold;
-      margin-bottom: 1.4375rem;
-      cursor: pointer; }
-      .container .main__intro .intro-text .intro-link:hover {
-        background-color: #fafafa;
-        color: #2d2640; }
+      margin-bottom: 1.4375rem; }
     .container .main__intro .intro-img-mobile {
       display: none; }
     .container .main__intro .intro-img-desktop {
@@ -126,6 +129,34 @@ html {
           color: #837d87;
           margin-top: 20px;
           line-height: 2; }
+  .container .main__more {
+    padding: 0 250px;
+    position: relative;
+    margin-bottom: 160px; }
+    .container .main__more .more-content {
+      background-color: #2d2640;
+      padding: 77px 133px;
+      height: fit-content;
+      color: #fafafa;
+      display: flex; }
+      .container .main__more .more-content h2 {
+        display: inline;
+        font-size: 3rem;
+        line-height: 1; }
+        .container .main__more .more-content h2 span {
+          display: block; }
+      .container .main__more .more-content .more-link {
+        position: relative;
+        margin: auto;
+        bottom: 4px;
+        left: 211px;
+        z-index: 2;
+        padding: 0.9375rem 1.75rem; }
+      .container .main__more .more-content .more-desktop-img {
+        position: absolute;
+        top: 0;
+        right: 250px;
+        z-index: 1; }
 
 @media (max-width: 1200px) {
   .container .header {
@@ -181,4 +212,22 @@ html {
           text-align: center; }
         .container .main__about .about-services div p {
           line-height: 1.5;
-          text-align: center; } }
+          text-align: center; }
+  .container .main__more {
+    padding: 100px 24px 0; }
+    .container .main__more .more-content {
+      padding: 74px 40px 68px;
+      display: block;
+      background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+      background-repeat: no-repeat;
+      background-position: top right; }
+      .container .main__more .more-content h2 {
+        padding: 0;
+        font-size: 2.4rem;
+        text-align: center; }
+      .container .main__more .more-content .more-link {
+        display: block;
+        margin-top: 18px;
+        left: 0; }
+      .container .main__more .more-content .more-desktop-img {
+        display: none; } }
