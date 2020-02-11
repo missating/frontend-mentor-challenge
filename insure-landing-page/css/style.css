@@ -4,6 +4,11 @@
   to {
     height: 100vh; } }
 
+.container .main__intro .intro-text .hr, .container .main__about .hr {
+  height: 0.0625rem;
+  width: 10rem;
+  margin-bottom: 4.8125rem; }
+
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +31,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.0625rem 15.625rem;
+    padding: 2.0625rem 17rem;
     position: relative;
     z-index: 2; }
     .container .header__hamburger-toggle {
@@ -55,7 +60,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.625rem 15.625rem; }
+    padding: 0.625rem 15rem; }
     .container .main__intro .left-decor-pattern {
       position: absolute;
       left: -0.3125rem;
@@ -66,10 +71,7 @@ html {
       right: 0.0625rem;
       z-index: 1; }
     .container .main__intro .intro-text .hr {
-      height: 0.0625rem;
-      width: 10rem;
-      background-color: #fafafa;
-      margin-bottom: 4.8125rem; }
+      background-color: #fafafa; }
     .container .main__intro .intro-text h1 {
       font-size: 5rem;
       line-height: 5rem;
@@ -100,7 +102,30 @@ html {
     .container .main__intro .intro-img-desktop {
       position: relative;
       top: 8.75rem;
-      right: -0.625rem; }
+      right: -2.625rem; }
+  .container .main__about {
+    background-color: transparent;
+    padding: 244px 275px 173px; }
+    .container .main__about .hr {
+      background-color: #95a9c6; }
+    .container .main__about h2 {
+      color: #2d2640;
+      font-size: 4rem; }
+    .container .main__about .about-services {
+      display: flex;
+      justify-content: space-between; }
+      .container .main__about .about-services div {
+        max-width: 352px; }
+        .container .main__about .about-services div img {
+          margin-bottom: 40px;
+          margin-top: 106px; }
+        .container .main__about .about-services div h3 {
+          font-size: 1.8rem;
+          line-height: initial; }
+        .container .main__about .about-services div p {
+          color: #837d87;
+          margin-top: 20px;
+          line-height: 2; }
 
 @media (max-width: 1200px) {
   .container .header {
