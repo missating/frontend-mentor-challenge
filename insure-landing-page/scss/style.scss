@@ -63,6 +63,8 @@ html {
     }
 
     &__nav {
+      display: block;
+
       &__items {
         display: flex;
 
@@ -70,10 +72,12 @@ html {
           list-style-type: none;
           margin-left: 1rem;
           text-transform: uppercase;
-          color: $dark-grayish-violet;
           cursor: pointer;
 
           a {
+            text-decoration: none;
+            color: $dark-grayish-violet;
+
             &:hover {
               color: $dark-violet;
             }
@@ -104,17 +108,22 @@ html {
       align-items: center;
       padding: 0.625rem 15rem;
 
-      .left-decor-pattern {
+      .desktop-left-decor-pattern {
         position: absolute;
         left: -0.3125rem;
         top: 36.25rem;
       }
 
-      .right-decor-pattern {
+      .desktop-right-decor-pattern {
         position: absolute;
         top: 5.5rem;
         right: 0.0625rem;
         z-index: 1;
+      }
+
+      .mobile-left-decor-pattern,
+      .mobile-right-decor-pattern {
+        display: none;
       }
 
       .intro-text {
@@ -320,7 +329,7 @@ html {
 @media (max-width: 1200px) {
   .container {
     .header {
-      padding: 0;
+      padding: 25px;
 
       &__hamburger-toggle {
         display: block;
@@ -328,6 +337,36 @@ html {
 
       &__nav {
         display: none;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 4.9rem;
+        background: $very-dark-violet url(../images/bg-pattern-mobile-nav.svg);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: 91.1%;
+        background-size: 100% 218px;
+
+        &__items {
+          flex-direction: column;
+
+          li {
+            text-align: center;
+            padding: 25px 15px;
+
+            a {
+              color: $very-light-gray;
+            }
+
+            .active {
+              margin: 20px auto 0;
+              padding: 15px 15px;
+              border: 0.125rem solid $very-light-gray;
+              color: $very-light-gray;
+            }
+          }
+        }
       }
     }
 
@@ -336,12 +375,26 @@ html {
         flex-direction: column-reverse;
         padding: 0;
 
-        .left-decor-pattern {
+        .desktop-left-decor-pattern,
+        .desktop-right-decor-pattern {
           display: none;
         }
 
-        .right-decor-pattern {
-          display: none;
+        .mobile-left-decor-pattern,
+        .mobile-right-decor-pattern {
+          display: block;
+        }
+
+        .mobile-left-decor-pattern {
+          position: absolute;
+          left: -0.3125rem;
+          top: 64rem;
+        }
+
+        .mobile-right-decor-pattern {
+          position: absolute;
+          top: 82rem;
+          right: 0.0625rem;
         }
 
         .intro-text {
@@ -349,17 +402,28 @@ html {
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          padding-bottom: 92px;
 
           .hr {
             display: none;
           }
 
           h1 {
-            font-size: 1rem;
+            text-align: center;
+            font-size: 2.5rem;
+            line-height: normal;
+            padding: 30px;
           }
 
           p {
-            margin: 0;
+            margin-bottom: 33px;
+            width: 300px;
+            margin-top: 0;
+            color: rgb(206, 206, 206);
+            line-height: 1.3;
+            letter-spacing: 1px;
+            text-align: center;
+            font-size: 0.9rem;
           }
         }
 
