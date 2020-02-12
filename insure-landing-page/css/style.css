@@ -27,8 +27,7 @@
   padding: 0;
   box-sizing: border-box; }
 
-body,
-html {
+body {
   font-family: "Karla", sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -49,28 +48,26 @@ html {
     z-index: 2; }
     .container .header__hamburger-toggle {
       display: none; }
-    .container .header__nav {
-      display: block; }
-      .container .header__nav__items {
-        display: flex; }
-        .container .header__nav__items li {
-          list-style-type: none;
-          margin-left: 1rem;
-          text-transform: uppercase;
-          cursor: pointer; }
-          .container .header__nav__items li a {
-            text-decoration: none;
-            color: #837d87; }
-            .container .header__nav__items li a:hover {
-              color: #2d2640; }
-          .container .header__nav__items li .active {
-            border: 0.125rem solid #2d2640;
-            color: #2d2640;
-            padding: 0.7rem 1.75rem;
-            transition: all 0.3s ease-in; }
-            .container .header__nav__items li .active:hover {
-              background-color: #2d2640;
-              color: #fafafa; }
+    .container .header__nav__items {
+      display: flex; }
+      .container .header__nav__items li {
+        list-style-type: none;
+        margin-left: 1rem;
+        text-transform: uppercase;
+        cursor: pointer; }
+        .container .header__nav__items li a {
+          text-decoration: none;
+          color: #837d87; }
+          .container .header__nav__items li a:hover {
+            color: #2d2640; }
+        .container .header__nav__items li .active {
+          border: 0.125rem solid #2d2640;
+          color: #2d2640;
+          padding: 0.7rem 1.75rem;
+          transition: all 0.3s ease-in; }
+          .container .header__nav__items li .active:hover {
+            background-color: #2d2640;
+            color: #fafafa; }
   .container .main__intro {
     height: fit-content;
     background-color: #2d2640;
@@ -231,7 +228,8 @@ html {
       background-repeat: no-repeat;
       background-position-x: right;
       background-position-y: 91.1%;
-      background-size: 100% 218px; }
+      background-size: 100% 218px;
+      animation: navOpen 2s ease-in; }
       .container .header__nav__items {
         flex-direction: column; }
         .container .header__nav__items li {
