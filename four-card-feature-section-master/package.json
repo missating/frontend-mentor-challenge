@@ -1,0 +1,19 @@
+{
+  "name": "four-card-feature-section-master",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Challenge 4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/missating/frontend-mentor-challenge.git"
+  },
+  "author": "Vanessa Ating <atingenkay@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/missating/frontend-mentor-challenge/issues"
+  },
+  "homepage": "https://github.com/missating/frontend-mentor-challenge#readme"
+}
