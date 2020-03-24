@@ -4,66 +4,68 @@
   padding: 0; }
 
 body {
-  height: 100%;
   background-color: #fafafa; }
 
-.main-container header {
-  text-align: center;
-  margin: 5rem auto 3rem; }
-  .main-container header h1 {
-    color: #4c4e61;
-    margin-bottom: 1rem; }
-    .main-container header h1 span {
-      display: block; }
-    .main-container header h1 .heading-text-one {
+.main-container {
+  position: relative;
+  min-height: 100vh; }
+  .main-container header {
+    text-align: center;
+    margin: 5rem auto 3rem; }
+    .main-container header h1 {
+      color: #4c4e61;
+      margin-bottom: 1rem; }
+      .main-container header h1 span {
+        display: block; }
+      .main-container header h1 .heading-text-one {
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        font-weight: 200; }
+      .main-container header h1 .heading-text-two {
+        font-family: "Poppins", sans-serif;
+        font-size: 2rem;
+        font-weight: 600; }
+    .main-container header h2 {
+      color: #a3a5ae;
       font-family: "Poppins", sans-serif;
-      font-size: 2rem;
-      font-weight: 200; }
-    .main-container header h1 .heading-text-two {
-      font-family: "Poppins", sans-serif;
-      font-size: 2rem;
-      font-weight: 600; }
-  .main-container header h2 {
-    color: #a3a5ae;
-    font-family: "Poppins", sans-serif;
-    font-size: 1rem;
-    font-weight: 400; }
-    .main-container header h2 span {
-      display: block; }
-
-.main-container main .card-layout {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .main-container main .card-layout .card-content {
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 1px 5px 8px #b4cae9;
-    box-sizing: border-box;
-    border-top: 4px solid;
-    margin: 1rem;
-    height: 15.875rem;
-    position: relative;
-    width: 21.875rem;
-    cursor: pointer; }
-    .main-container main .card-layout .card-content img {
-      position: absolute;
-      right: 2rem;
-      bottom: 2rem; }
-    .main-container main .card-layout .card-content:hover {
-      animation: move-up 1s ease-out forwards; }
-
-.main-container footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 40px;
-  text-align: center; }
-  .main-container footer .attribution {
-    font-size: 1rem;
+      font-size: 1rem;
+      font-weight: 400; }
+      .main-container header h2 span {
+        display: block; }
+  .main-container main {
+    padding-bottom: 2.5rem; }
+    .main-container main .card-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .main-container main .card-layout .card-content {
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 1px 5px 8px #b4cae9;
+        box-sizing: border-box;
+        border-top: 4px solid;
+        margin: 1rem;
+        height: 15.875rem;
+        position: relative;
+        width: 21.875rem;
+        cursor: pointer; }
+        .main-container main .card-layout .card-content img {
+          position: absolute;
+          right: 2rem;
+          bottom: 2rem; }
+        .main-container main .card-layout .card-content:hover {
+          animation: move-up 1s ease-out forwards; }
+  .main-container footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
     text-align: center; }
-  .main-container footer .attribution a {
-    color: #3e52a3; }
+    .main-container footer .attribution {
+      font-size: 1rem;
+      text-align: center; }
+    .main-container footer .attribution a {
+      color: #3e52a3; }
 
 @media (min-width: 50rem) {
   main {
