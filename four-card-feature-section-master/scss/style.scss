@@ -77,7 +77,7 @@ body {
         margin: 1rem;
         height: 15.875rem;
         position: relative;
-        width: 21.875rem;
+        max-width: 21.875rem;
         cursor: pointer;
 
         h3 {
@@ -140,27 +140,17 @@ body {
   }
 }
 
-@media (min-width: 50rem) {
+@media (min-width: 75rem) {
   main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
+    // align-content: center;
     align-items: center;
 
     .card-layout {
       flex-direction: row;
-    }
-  }
-}
-
-@media (min-width: 73rem) {
-  main {
-    flex-wrap: nowrap;
-
-    .card-layout {
-      flex-direction: column;
     }
   }
 }

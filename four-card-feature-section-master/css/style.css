@@ -47,7 +47,7 @@ body {
         margin: 1rem;
         height: 15.875rem;
         position: relative;
-        width: 21.875rem;
+        max-width: 21.875rem;
         cursor: pointer; }
         .main-container main .card-layout .card-content h3 {
           color: #4c4e61;
@@ -89,22 +89,15 @@ body {
     .main-container footer .attribution a {
       color: #3e52a3; }
 
-@media (min-width: 50rem) {
+@media (min-width: 75rem) {
   main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
     align-items: center; }
     main .card-layout {
       flex-direction: row; } }
-
-@media (min-width: 73rem) {
-  main {
-    flex-wrap: nowrap; }
-    main .card-layout {
-      flex-direction: column; } }
 
 @keyframes move-up {
   0% {
