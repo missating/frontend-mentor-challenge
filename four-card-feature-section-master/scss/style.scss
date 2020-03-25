@@ -1,6 +1,8 @@
 $very-light-gray: hsl(0, 0%, 98%);
 $very-dark-blue: hsl(234, 12%, 34%);
 $grayish-blue: hsl(229, 6%, 66%);
+$box-shadow: #b4cae9;
+$link-color: #3e52a3;
 $white: #ffffff;
 $red: hsl(0, 78%, 62%);
 $cyan: hsl(180, 62%, 55%);
@@ -69,7 +71,7 @@ body {
       .card-content {
         background-color: $white;
         border-radius: 5px;
-        box-shadow: 1px 5px 8px #b4cae9;
+        box-shadow: 1px 5px 8px $box-shadow;
         box-sizing: border-box;
         border-top: 4px solid;
         margin: 1rem;
@@ -78,6 +80,19 @@ body {
         width: 21.875rem;
         cursor: pointer;
 
+        h3 {
+          color: $very-dark-blue;
+          @include mainFont(600, 1.2rem);
+          padding: 1.75rem 0 0 2rem;
+          margin: 0 0 0.5rem;
+        }
+
+        p {
+          color: $grayish-blue;
+          @include mainFont(400, 0.8125rem);
+          margin: 0 2rem;
+          max-width: 17rem;
+        }
         img {
           position: absolute;
           right: 2rem;
@@ -87,6 +102,22 @@ body {
         &:hover {
           animation: move-up 1s ease-out forwards;
         }
+      }
+
+      .cyan {
+        border-color: $cyan;
+      }
+
+      .red {
+        border-color: $red;
+      }
+
+      .orange {
+        border-color: $orange;
+      }
+
+      .blue {
+        border-color: $blue;
       }
     }
   }
@@ -104,7 +135,7 @@ body {
     }
 
     .attribution a {
-      color: #3e52a3;
+      color: $link-color;
     }
   }
 }

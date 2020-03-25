@@ -49,12 +49,34 @@ body {
         position: relative;
         width: 21.875rem;
         cursor: pointer; }
+        .main-container main .card-layout .card-content h3 {
+          color: #4c4e61;
+          font-family: "Poppins", sans-serif;
+          font-size: 1.2rem;
+          font-weight: 600;
+          padding: 1.75rem 0 0 2rem;
+          margin: 0 0 0.5rem; }
+        .main-container main .card-layout .card-content p {
+          color: #a3a5ae;
+          font-family: "Poppins", sans-serif;
+          font-size: 0.8125rem;
+          font-weight: 400;
+          margin: 0 2rem;
+          max-width: 17rem; }
         .main-container main .card-layout .card-content img {
           position: absolute;
           right: 2rem;
           bottom: 2rem; }
         .main-container main .card-layout .card-content:hover {
           animation: move-up 1s ease-out forwards; }
+      .main-container main .card-layout .cyan {
+        border-color: #45d3d3; }
+      .main-container main .card-layout .red {
+        border-color: #ea5353; }
+      .main-container main .card-layout .orange {
+        border-color: #fcaf4a; }
+      .main-container main .card-layout .blue {
+        border-color: #549ef2; }
   .main-container footer {
     position: absolute;
     bottom: 0;
