@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require("path");
 
 module.exports = {
   module: {
@@ -17,6 +18,14 @@ module.exports = {
             loader: "html-loader"
           }
         ]
+      },
+      {
+        resolve: {
+          alias: {
+            components: path.resolve(__dirname, "src/components/"),
+            pages: path.resolve(__dirname, "src/pages/")
+          }
+        }
       }
     ]
   },
