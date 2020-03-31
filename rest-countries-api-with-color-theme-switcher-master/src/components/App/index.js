@@ -1,11 +1,7 @@
 import React from "react";
 
-import { AppContainer } from "./styled";
+import Routes from "routes";
 
-const App = () => (
-  <AppContainer>
-    <h1> Rest Countries API with theme switcher</h1>
-  </AppContainer>
-);
+const App = () => <Routes />;
 
 export default App;
