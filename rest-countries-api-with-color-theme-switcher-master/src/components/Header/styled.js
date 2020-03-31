@@ -7,12 +7,12 @@ export const HeaderContainer = styled.header`
   padding: 1.2rem 4rem;
 `;
 
-export const HeadingStyle = styled.h1`
+export const HeaderH1 = styled.h1`
   font-size: 1.5rem;
   font-weight: 800;
 `;
 
-export const ButtonStyle = styled.button`
+export const HeaderButton = styled.button`
   display: flex;
   cursor: pointer;
   background: transparent;
@@ -20,7 +20,7 @@ export const ButtonStyle = styled.button`
   color: ;
 `;
 
-export const TextStyle = styled.p`
+export const HeaderP = styled.p`
   font-size: 1rem;
   font-weight: 400;
   margin: 0.1rem 0 0 0.5rem;

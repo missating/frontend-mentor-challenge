@@ -1,6 +1,6 @@
 export const lightTheme = {
-  header: "hsl(0, 0%, 98%)",
-  body: "hsl(0, 0%, 100%)",
+  body: "hsl(0, 0%, 98%)",
+  header: "hsl(0, 0%, 100%)",
   text: "hsl(200, 15%, 8%)",
   shadow: "hsl(0, 0%, 80%)"
 };

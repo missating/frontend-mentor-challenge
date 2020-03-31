@@ -5,12 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "../../theme";
 import { GlobalStyles } from "../../global";
 
-import {
-  HeaderContainer,
-  HeadingStyle,
-  ButtonStyle,
-  TextStyle
-} from "./styled";
+import { HeaderContainer, HeaderH1, HeaderButton, HeaderP } from "./styled";
 
 const Header = props => {
   const [theme, setTheme] = useState("light");
@@ -28,8 +23,8 @@ const Header = props => {
       <>
         <GlobalStyles />
         <HeaderContainer>
-          <HeadingStyle>Where in the world?</HeadingStyle>
-          <ButtonStyle onClick={toggleTheme}>
+          <HeaderH1>Where in the world?</HeaderH1>
+          <HeaderButton onClick={toggleTheme}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -41,10 +36,8 @@ const Header = props => {
                 style={{ fill: theme === "light" ? "" : "#fff" }}
               />
             </svg>
-            <TextStyle>
-              {theme === "light" ? "Dark Mode" : "Light Mode"}
-            </TextStyle>
-          </ButtonStyle>
+            <HeaderP>{theme === "light" ? "Dark Mode" : "Light Mode"}</HeaderP>
+          </HeaderButton>
         </HeaderContainer>
       </>
     </ThemeProvider>
